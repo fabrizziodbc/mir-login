@@ -1,0 +1,146 @@
+:root {
+  --color-main: #2097f3;
+  --color-background: #ece6f6;
+  --color-background-sec: #fff;
+  --color-background-darker: rgb(95, 93, 93);
+  --font-size-text: 1.4rem;
+  --font-size-text-t: 1rem;
+  --font-size-icon: 6rem;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: var(--font-size-text);
+}
+.header {
+  background-color: var(--color-main);
+  width: 100vw;
+  height: 180px;
+  padding: 16px;
+}
+.header__title {
+  text-align: center;
+  color: var(--color-background-sec);
+  font-size: var(--font-size-text);
+}
+.main {
+  position: absolute;
+  background-color: var(--color-background);
+  width: 100vw;
+  height: calc(100vh - 180px);
+}
+.login {
+  margin: 0 auto;
+  padding-top: 12px;
+  position: relative;
+  background-color: var(--color-background-sec);
+  width: 80vw;
+  max-width: 420px;
+  min-height: 54vh;
+  top: -80px;
+  border-radius: 5px;
+  box-shadow: 0px 2px 9px 0px rgba(0, 0, 0, 0.79);
+  -webkit-box-shadow: 0px 2px 9px 0px rgba(0, 0, 0, 0.79);
+  -moz-box-shadow: 0px 2px 9px 0px rgba(0, 0, 0, 0.79);
+}
+.fa-user-circle {
+  color: var(--color-main);
+  font-size: var(--font-size-icon);
+  position: relative;
+  left: calc(50% - calc(var(--font-size-icon) / 2));
+}
+.login__form {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.login__input {
+  margin: auto 0;
+  display: inline;
+  width: 100%;
+  border: none;
+  border-bottom: solid 1px var(--color-background-darker);
+  margin-bottom: var(--font-size-text);
+  text-align: start;
+  padding: 4px 0;
+}
+.checkbox {
+  position: absolute;
+  height: calc(var(--font-size-text) * 2);
+  margin-bottom: var(--font-size-text);
+}
+.checkbox__input {
+  width: 18px;
+  height: 18px;
+  position: relative;
+  top: calc(var(--font-size-text) - calc(var(--font-size-text-t) / 2));
+  margin-right: 4px;
+}
+.checkbox__label {
+  font-size: var(--font-size-text-t);
+  font-weight: 300;
+  position: relative;
+  top: calc(var(--font-size-text) - var(--font-size-text-t));
+}
+
+.button {
+  position: absolute;
+  width: 100px;
+  bottom: 20px;
+  left: calc(50% - calc(100px / 2));
+  background-color: var(--color-main);
+  border: none;
+  padding: 8px 4px;
+  color: var(--color-background);
+  border-radius: 5px;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --font-size-text: 1.6rem;
+    --font-size-text-t: 1.2rem;
+    --font-size-icon: 6rem;
+  }
+}
+@media (min-width: 992px) {
+  :root {
+    --color-main: rgb(68, 0, 146);
+    --color-background: #ece6f6;
+    --color-background-sec: #fff;
+    --color-background-darker: rgb(95, 93, 93);
+    --font-size-text: 1.8rem;
+    --font-size-text-t: 1.4rem;
+    --font-size-icon: 7rem;
+  }
+  .header,
+  .button,
+  .login {
+    transition: background-color 2s linear;
+  }
+  .fa-user-circle {
+    transition: color 2s linear;
+  }
+  .checkbox__input {
+    top: calc(var(--font-size-text) - calc(var(--font-size-text-t) * 0.75));
+  }
+  .login {
+    height: 57vh;
+  }
+}
+@media (min-width: 1199px) {
+  :root {
+    --font-size-text: 2.1rem;
+    --font-size-text-t: 1.7rem;
+    --font-size-icon: 7.5rem;
+  }
+  .login {
+    height: 60vh;
+  }
+}
